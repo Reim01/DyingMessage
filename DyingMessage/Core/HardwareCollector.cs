@@ -27,12 +27,15 @@ namespace DyingMessage.Core
         private float? _cpuLoad;
         private float? _memoryLoad;
         private float? _gpuLoad;
-
-        public HardwareCollector()
+        private readonly ILogger<Worker> _logger;
+        public HardwareCollector(ILogger<Worker> logger)
         {
+            _logger = logger;
+
             _computer = new Computer
             {
                 IsCpuEnabled = true,
+                IsMemoryEnabled = true,
                 IsGpuEnabled = true,
                 IsMotherboardEnabled = false,
                 IsControllerEnabled = false,
@@ -100,9 +103,9 @@ namespace DyingMessage.Core
                     hardware.HardwareType == HardwareType.GpuAmd ||
                     hardware.HardwareType == HardwareType.GpuIntel) &&
                     sensor.SensorType == SensorType.Load &&
-                    (sensor.Name.Contains("D3D 3D") || sensor.Name.Contains("GPU Core")))
+                    (sensor.Name.Contains("D3D 3D"))) // 3d엔진 사용률만 가져옴, Performance Counter를 따로 구현해야할 필요
                 {
-                    if(_gpuLoad == null || sensor.Value > _gpuLoad)
+                    if (_gpuLoad == null || sensor.Value > _gpuLoad)
                     {
                         _gpuLoad = sensor.Value;
                     }

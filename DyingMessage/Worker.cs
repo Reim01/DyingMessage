@@ -30,8 +30,11 @@ namespace DyingMessage
                 try
                 {
                     var metric = _collector.Collect();
+
+                    //수집 데이터 저장 시작
                     await _repository.SaveAsync(metric, stoppingToken);
 
+                    // 로그 찍기
                     _logger.LogInformation("[{Time}] CPU: {Cpu:F1}%, RAM: {Mem:F1}%, GPU: {Gpu:F1}% 저장 완료",
                         metric.Timestamp.ToLocalTime().ToString("HH:mm:ss"),
                         metric.CpuLoad,
