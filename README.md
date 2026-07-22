@@ -1,3 +1,3 @@
-Core - LibreHardwareMonitor
-Storage - SQLite
+Core - LibreHardwareMonitor  <br />
+Storage - SQLite  <br />
 IPC - NamedPipeLine
