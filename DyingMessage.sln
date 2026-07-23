@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36301.6 d17.14
+VisualStudioVersion = 17.14.36301.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DyingMessage", "DyingMessage\DyingMessage.csproj", "{EDA4C135-1E4E-4856-8496-18A515FD8AF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agent", "Agent\Agent.csproj", "{E56B75D4-FD1B-489E-AD61-76F05047A446}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{EDA4C135-1E4E-4856-8496-18A515FD8AF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDA4C135-1E4E-4856-8496-18A515FD8AF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDA4C135-1E4E-4856-8496-18A515FD8AF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E56B75D4-FD1B-489E-AD61-76F05047A446}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E56B75D4-FD1B-489E-AD61-76F05047A446}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E56B75D4-FD1B-489E-AD61-76F05047A446}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E56B75D4-FD1B-489E-AD61-76F05047A446}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
